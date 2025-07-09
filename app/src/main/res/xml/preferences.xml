@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="User Specification">
+
+        <CheckBoxPreference
+            android:enabled="true"
+            android:key="SAMPLE_CHECKBOX"
+            android:summary="Some Description"
+            android:summaryOff="Some Description when not checked"
+            android:summaryOn="Some Description when checked"
+            android:title="Sample Checkbox" />
+        <EditTextPreference
+            android:dialogIcon="@drawable/ic_launcher_foreground"
+            android:dialogMessage="Please enter your first name"
+            android:dialogTitle="Enter your first name"
+            android:key="USER_FIRST_NAME"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="OK, It&apos;s my name"
+            android:summary="please enter your name..."
+            android:title="Enter your name" />
+        <ListPreference
+            android:entries="@array/Colors"
+            android:entryValues="@array/ColorValues"
+            android:key="USER_SELECTED_COLOR"
+            android:summary="Please select your color..."
+            android:title="Select your color" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Application Behaviour">
+        <PreferenceScreen
+            android:key="advanced_setup_screen"
+            android:summary="Select this for advanced setup"
+            android:title="Goto Another Preference Page">
+            <CheckBoxPreference
+                android:key="SAMPLE_CHECKBOX_2"
+                android:title="Sample CheckBox" />
+            <EditTextPreference
+                android:key="SAMPLE_EDITTEXT"
+                android:title="Sample Edit Text" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>
